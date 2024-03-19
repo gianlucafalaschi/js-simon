@@ -17,13 +17,15 @@ console.log(text);
 // partendo a contare da 30
 // viene decrementato il numero di 1 ogni secondo
 // quando il numero arriva a 0, i numeri scompaiono
-let timer = 30;
+let timer = 3;
 const clock = setInterval(function() {
     timer--;
     console.log(timer);
     textBox.innerHTML = randArray;
     if(timer == 0) {
         clearInterval(clock);
+        // quando il numero arriva a 0, i numeri scompaiono
+        textBox.innerHTML = '';
     }
 },1000)
 
