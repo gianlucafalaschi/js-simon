@@ -22,13 +22,17 @@ const clock = setInterval(function() {
     timer--;
     console.log(timer);
     textBox.innerHTML = randArray;
-    if(timer == 0) {
-        clearInterval(clock);
+    if(timer < 0) {
+        
         // quando il numero arriva a 0, i numeri scompaiono
         textBox.innerHTML = '';
         // chiedo con il prompt all'utente 5 numeri e li salvo in un array
-        for(let i = 0; i < 5; i++) {
-            let userNumber = parseInt(prompt('Dammi un numero da 1 a 100 che hai visto nello schermo'));
+        if(timer == -2){
+            clearInterval(clock);
+            for(let i = 0; i < 5; i++) {
+                let userNumber = parseInt(prompt('Dammi un numero da 1 a 100 che hai visto nello schermo'));
+            }
+        
         }
     }
 },1000);
