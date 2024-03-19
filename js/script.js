@@ -43,7 +43,7 @@ const clock = setInterval(function() {
     }
 },1000);
 
-console.log(userNumberList);
+
 
 // chiedo con il prompt all'utente 5 numeri e li salvo in un array
 
