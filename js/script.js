@@ -9,8 +9,10 @@ indovinare sono stati individuati.
 //  creare 5 numeri random e metterli in un array
 const randArray = generateRandomArray(5, 0, 100);
 console.log(randArray);
-// visualizzare i numeri in pagina per 30 secondi
 
+// visualizzare i numeri in pagina per 30 secondi
+const textBox = document.querySelector('#text');
+console.log(text);
 // dopo i 30 secondi i numeri scompaiono
 // partendo a contare da 30
 // viene decrementato il numero di 1 ogni secondo
@@ -19,7 +21,7 @@ let timer = 30;
 const clock = setInterval(function() {
     timer--;
     console.log(timer);
-    document.querySelector('#text').innerHTML = randArray;
+    textBox.innerHTML = randArray;
     if(timer == 0) {
         clearInterval(clock);
     }
