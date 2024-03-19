@@ -13,6 +13,7 @@ console.log(randArray);
 // visualizzare i numeri in pagina per 30 secondi
 const textBox = document.querySelector('#text');
 console.log(text);
+const userNumberList = [];
 // dopo i 30 secondi i numeri scompaiono
 // partendo a contare da 30
 // viene decrementato il numero di 1 ogni secondo
@@ -27,15 +28,22 @@ const clock = setInterval(function() {
         // quando il numero arriva a 0, i numeri scompaiono
         textBox.innerHTML = '';
         // chiedo con il prompt all'utente 5 numeri e li salvo in un array
+        
+        
         if(timer == -2){
             clearInterval(clock);
             for(let i = 0; i < 5; i++) {
                 let userNumber = parseInt(prompt('Dammi un numero da 1 a 100 che hai visto nello schermo'));
+                console.log('userNumber',userNumber);
+                userNumberList.push(userNumber);
+                
             }
-        
+            console.log(userNumberList);
         }
     }
 },1000);
+
+console.log(userNumberList);
 
 // chiedo con il prompt all'utente 5 numeri e li salvo in un array
 
