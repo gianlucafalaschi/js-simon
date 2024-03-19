@@ -8,10 +8,22 @@ indovinare sono stati individuati.
 
 //  creare 5 numeri random e metterli in un array
 const randArray = generateRandomArray(5, 0, 100);
-console.log(randArray)
+console.log(randArray);
 // visualizzare i numeri in pagina per 30 secondi
 
 // dopo i 30 secondi i numeri scompaiono
+// partendo a contare da 30
+// viene decrementato il numero di 1 ogni secondo
+// quando il numero arriva a 0, i numeri scompaiono
+let timer = 30;
+const clock = setInterval(function() {
+    timer--;
+    console.log(timer);
+    document.querySelector('#text').innerHTML = randArray;
+    if(timer == 0) {
+        clearInterval(clock);
+    }
+},1000)
 
 // chiedo con il prompt all'utente 5 numeri e li salvo in un array
 
