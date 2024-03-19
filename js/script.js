@@ -27,7 +27,7 @@ const clock = setInterval(function() {
         // quando il numero arriva a 0, i numeri scompaiono
         textBox.innerHTML = '';
     }
-},1000)
+},1000);
 
 // chiedo con il prompt all'utente 5 numeri e li salvo in un array
 
