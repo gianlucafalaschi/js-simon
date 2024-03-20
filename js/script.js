@@ -40,7 +40,11 @@ const clock = setInterval(function() {
                 console.log(thisNumber);
             }
             console.log(userNumberList);
-
+            //controllare se i numeri dati dall'utente sono presenti nell'array dei numeri random
+            let numberFound = [];
+            for(let i = 0; i < randArray.length; i++) {
+                console.log('contatore',i);
+            }
         }
     }
 },1000);
