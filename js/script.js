@@ -42,12 +42,15 @@ const clock = setInterval(function() {
             }
             console.log(userNumberList);
              //controllare se i numeri dati dall'utente sono presenti nell'array dei numeri random
-            let numberFound = [];
+            let numbersFound = [];
             for(let i = 0; i < randArray.length; i++) {
                 console.log(randArray, userNumberList)
                 if(randArray.includes(userNumberList[i])){
-                    alert('numero trovato');
+                    numbersFound.push(userNumberList[i]);
+                    console.log(numbersFound);
+                    alert(`Hai indovinato i numeri ${numbersFound}`);
                 }
+                
             }
         }
     }
