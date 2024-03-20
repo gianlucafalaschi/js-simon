@@ -27,47 +27,29 @@ const clock = setInterval(function() {
         
         // quando il numero arriva a 0, i numeri scompaiono
         textBox.innerHTML = '';
-        // chiedo con il prompt all'utente 5 numeri e li salvo in un array
         
-        let thisNumber;
+        
+        // chiedo con il prompt all'utente 5 numeri 
+        // creo un array di numeri corretti(quelli indovinati dall'utente)
+        const numbersFound = [];
         if(timer == -2){
             clearInterval(clock);
             for(let i = 0; i < 5; i++) {
                 let userNumber = parseInt(prompt('Dammi un numero da 1 a 100 che hai visto nello schermo'));
                 console.log('userNumber',userNumber);
-                userNumberList.push(userNumber);
-                thisNumber = userNumberList[i];
-                console.log(thisNumber);
-             
-            }
-            console.log(userNumberList);
-             //controllare se i numeri dati dall'utente sono presenti nell'array dei numeri random
-            let numbersFound = [];
-            for(let i = 0; i < randArray.length; i++) {
-                console.log(randArray, userNumberList)
-                if(randArray.includes(userNumberList[i])){
-                    numbersFound.push(userNumberList[i]);
-                    console.log(numbersFound);
-                    alert(`Hai indovinato i numeri ${numbersFound}`);
+                // per ogni numero dato dall'utente lo aggiungo ad un array di numeri corretti se presente 
+                //nell'array dei numeri random
+                if(randArray.includes(userNumber)) {
+                    numbersFound.push(userNumber);
+                    console.log(numbersFound)
                 }
-                
+
             }
+            // dico all'utente quanti e quali numeri da individuare sono stati individuati
+            textBox.innerHTML = `Hai indovinato ${numbersFound.length} numeri. I numeri indovinati sono ${numbersFound}`;
         }
     }
 },1000);
-
-
-
-// chiedo con il prompt all'utente 5 numeri e li salvo in un array
-
-// confronto i 5 numeri dati dall'utente con i numeri random
-
-// dico all'utente quanti e quali numeri da individuare sono stati individuati
-
-
-
-
-
 
 // FUNCTIONS
 
