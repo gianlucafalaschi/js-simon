@@ -38,13 +38,14 @@ const clock = setInterval(function() {
                 userNumberList.push(userNumber);
                 let thisNumber = userNumberList[i];
                 console.log(thisNumber);
+             
             }
             console.log(userNumberList);
-            //controllare se i numeri dati dall'utente sono presenti nell'array dei numeri random
+             //controllare se i numeri dati dall'utente sono presenti nell'array dei numeri random
             let numberFound = [];
             for(let i = 0; i < randArray.length; i++) {
-                console.log('contatore',i);
-            }
+                console.log('thisNumber',thisNumber);
+            };
         }
     }
 },1000);
