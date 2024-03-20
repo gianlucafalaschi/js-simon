@@ -44,6 +44,7 @@ const clock = setInterval(function() {
              //controllare se i numeri dati dall'utente sono presenti nell'array dei numeri random
             let numberFound = [];
             for(let i = 0; i < randArray.length; i++) {
+                console.log(randArray, userNumberList)
                 if(randArray.includes(userNumberList[i])){
                     alert('numero trovato');
                 }
