@@ -36,9 +36,11 @@ const clock = setInterval(function() {
                 let userNumber = parseInt(prompt('Dammi un numero da 1 a 100 che hai visto nello schermo'));
                 console.log('userNumber',userNumber);
                 userNumberList.push(userNumber);
-                
+                let thisNumber = userNumberList[i];
+                console.log(thisNumber);
             }
             console.log(userNumberList);
+
         }
     }
 },1000);
