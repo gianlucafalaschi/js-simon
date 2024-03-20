@@ -18,7 +18,7 @@ const userNumberList = [];
 // partendo a contare da 30
 // viene decrementato il numero di 1 ogni secondo
 // quando il numero arriva a 0, i numeri scompaiono
-let timer = 5;
+let timer = 3;
 const clock = setInterval(function() {
     timer--;
     console.log(timer);
@@ -29,14 +29,14 @@ const clock = setInterval(function() {
         textBox.innerHTML = '';
         // chiedo con il prompt all'utente 5 numeri e li salvo in un array
         
-        
+        let thisNumber;
         if(timer == -2){
             clearInterval(clock);
             for(let i = 0; i < 5; i++) {
                 let userNumber = parseInt(prompt('Dammi un numero da 1 a 100 che hai visto nello schermo'));
                 console.log('userNumber',userNumber);
                 userNumberList.push(userNumber);
-                let thisNumber = userNumberList[i];
+                thisNumber = userNumberList[i];
                 console.log(thisNumber);
              
             }
@@ -44,8 +44,10 @@ const clock = setInterval(function() {
              //controllare se i numeri dati dall'utente sono presenti nell'array dei numeri random
             let numberFound = [];
             for(let i = 0; i < randArray.length; i++) {
-                console.log('thisNumber',thisNumber);
-            };
+                if(randArray.includes(userNumberList[i])){
+                    alert('numero trovato');
+                }
+            }
         }
     }
 },1000);
